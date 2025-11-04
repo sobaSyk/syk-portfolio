@@ -11,15 +11,15 @@ const PROFILE = {
   location: "Shah Alam, Selangor",
   email: "syukranshaari21@gmail.com",
   phone: "+6018-2679479",
-  github: "https://github.com/yourhandle",
+  github: "https://github.com/soba-syk",
   linkedin: "https://www.linkedin.com/in/syukranshaari/",
-  resumeUrl: "/resume.pdf", // Replace with actual file path
+  resumeUrl: "/DA - RESUME MUHAMMAD SYUKRAN.pdf", // Replace with actual file path
 };
 
 const SKILLS = [
   { name: "HTML5", level: 85 },
   { name: "CSS3", level: 85 },
-  { name: "JavaScript (ES6+)", level: 80 },
+  { name: "JavaScript", level: 80 },
   { name: "Bootstrap", level: 80 },
   { name: "Tailwind CSS", level: 75 },
   { name: "React", level: 70 },
