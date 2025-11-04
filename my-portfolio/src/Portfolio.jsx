@@ -29,7 +29,7 @@ const SKILLS = [
 
 const PROJECTS = [
   {
-    title: "Adsorption Capacity Prediction And Forecasting Analytics For Co₂ Dehydration Units Remaining Life Monitoring",
+    title: "AdsorbSense Monitoring System",
     stack: ["Python", "Pandas", "Microsoft Excel", "Microsoft Azure", "Power BI"],
     image: "adsorbSense.png",
     description:
