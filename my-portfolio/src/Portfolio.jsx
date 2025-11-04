@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail, Phone, Download, ExternalLink, Code, Hammer, Ro
 // ---- Quick customization (edit these) ----
 const PROFILE = {
   name: "Syukran Shaari",
-  title: "Web Developer (HTML • CSS • JS • Bootstrap)",
+  title: "Web Developer (HTML • CSS • Javascript • Bootstrap)",
   blurb:
     "I build clean, responsive interfaces with modern JavaScript. One year of hands-on experience shipping landing pages, dashboards, and component libraries.",
   location: "Shah Alam, Selangor",
@@ -13,7 +13,7 @@ const PROFILE = {
   phone: "+6018-2679479",
   github: "https://github.com/soba-syk",
   linkedin: "https://www.linkedin.com/in/syukranshaari/",
-  resumeUrl: "/DA - RESUME MUHAMMAD SYUKRAN.pdf", // Replace with actual file path
+  resumeUrl: "/WD - RESUME MUHAMMAD SYUKRAN.pdf", // Replace with actual file path
 };
 
 const SKILLS = [
@@ -29,50 +29,64 @@ const SKILLS = [
 
 const PROJECTS = [
   {
-    title: "Responsive Landing Page",
-    stack: ["HTML", "CSS", "Bootstrap"],
+    title: "Adsorption Capacity Prediction And Forecasting Analytics For Co₂ Dehydration Units Remaining Life Monitoring",
+    stack: ["Python", "Pandas", "Microsoft Excel", "Microsoft Azure", "Power BI"],
+    image: "adsorbSense.png",
     description:
-      "Marketing landing with sticky navbar, hero CTA, pricing cards, and newsletter integration. Lighthouse 95+ on mobile.",
-    highlights: ["Pixel-perfect sections", "Accessible forms", "SEO-friendly head tags"],
+      "Developed an analytical system for an oil and gas company to predict and monitor CO₂ dehydration unit lifespan using historical adsorption capacity data and machine learning forecasting models.",
+    highlights: ["Supported web interface design and dashboard integration",
+                  "Assisted in data research and preprocessing using Python and Excel",
+                  "Collaborated with engineers to visualize insights via Power BI and Azure",
+                ],
     link: "#",
   },
   {
-    title: "Admin Dashboard Widgets",
-    stack: ["React", "Tailwind", "Chart.js"],
+    title: "Financial Performance Analytics Automation System",
+    stack: ["HTML", "CSS", "Python", "MySQL", "Bootstrap"],
+    image: "financialDashboard.png",
     description:
-      "KPI dashboard with reusable cards, charts, and dark mode. Built design tokens and utility components.",
-    highlights: ["Component-driven", "Themeable", "Lazy-loaded charts"],
+      "Developed an automated web system to track and visualize financial KPIs using integrated database and Python scripts.",
+    highlights: [
+      "Automated data updates from MySQL",
+      "Designed responsive dashboard with Bootstrap",
+      "Generated KPI reports using Python scripts",
+    ],
     link: "#",
   },
   {
-    title: "UI Component Library",
-    stack: ["HTML", "CSS", "JS"],
+    title: "Cleaning Missing Data Methods for Supervised Learning Models: Rainfall Dataset",
+    stack: ["Python", "TensorFlow", "Microsoft Excel", "Weka", "Power BI"],
+    image: "/rainfallPrediction.png",
     description:
-      "Mini library of buttons, modals, and tabs. Documented with examples and code snippets.",
-    highlights: ["BEM utilities", "Keyboard navigation", "Docs site"],
+      "FYP Project: Analyzed rainfall data to evaluate various missing-data imputation methods and their impact on supervised learning model accuracy.",
+    highlights: [
+      "Cleaned and prepared data using Python and Excel",
+      "Built and tested models in TensorFlow and Weka",
+      "Visualized results and accuracy in Power BI",
+    ],
     link: "#",
   },
 ];
 
 const EXPERIENCE = [
   {
-    role: "Junior Web Developer",
-    company: "Company Name",
-    period: "Nov 2024 – Oct 2025",
+    role: "Web Developer",
+    company: "UiTM Technoventures Sdn Bhd, Shah Alam",
+    period: "Sep 2024 – Present",
     points: [
-      "Built 10+ responsive pages with Bootstrap and vanilla JS.",
-      "Converted Figma designs into clean, semantic HTML/CSS.",
-      "Improved performance scores (LCP under 2.5s).",
+      "Automated Excel data extraction and cleaning workflows, reducing manual processing time by 60%.",
+      "Analyzed large datasets for model performance tracking, contributing to improved prediction accuracy by 10%.",
+      "Built and deployed analytical dashboards for project monitoring using Power BI and Python (pandas, matplotlib).",
     ],
   },
   {
-    role: "Web Dev Intern",
-    company: "Another Company",
-    period: "Jun 2024 – Oct 2024",
+    role: "Information Technology Intern",
+    company: "MMC, Malacca",
+    period: "Sep 2021 – Feb 2022",
     points: [
-      "Maintained marketing site; fixed CSS bugs and layout issues.",
-      "Wrote JS utilities for accordions, carousels, and form validation.",
-      "Collaborated via Git, PR reviews, and standups.",
+      "Contributed in the development and deployment of a new information system for staff and students in collaboration with a five-member intern team, resulting in a 40% improvement in resource access efficiency across the institution.",
+      "Partnered with IT executives to troubleshoot and resolve complex cross-departmental technical issues, streamlining operations across three departments.",
+      "Authored detailed system documentation, reducing onboarding and maintenance time for future team members by 50%.",
     ],
   },
 ];
@@ -128,8 +142,12 @@ export default function Portfolio() {
       {/* Navigation */}
       <header className="sticky top-0 z-50 border-b bg-white/70 dark:bg-gray-950/60 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-          <a href="#home" className="font-semibold tracking-tight">
-            {PROFILE.name.split(" ")[0]}
+          <a href="#home" className="flex items-center gap-2">
+            <img
+              src="/logoSS.png"
+              alt="Logo"
+              className="h-8 w-8 object-contain"
+            />
           </a>
           <div className="hidden gap-4 md:flex">
             {[
@@ -198,7 +216,11 @@ export default function Portfolio() {
           </div>
           <Card className="md:ml-auto">
             <div className="flex items-center gap-4">
-              <div className="h-16 w-16 rounded-2xl bg-gradient-to-tr from-indigo-500 via-sky-500 to-emerald-500" />
+            <img
+              src="/profile.png"
+              alt="Profile"
+              className="h-16 w-16 rounded-2xl object-cover"
+            />
               <div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">Based in</p>
                 <p className="font-medium">{PROFILE.location}</p>
@@ -210,9 +232,9 @@ export default function Portfolio() {
             </div>
             <div className="mt-6 grid grid-cols-3 gap-3">
               {[
-                { label: "Projects", value: 12 },
+                { label: "Projects", value: 3 },
                 { label: "Pages Shipped", value: 30 },
-                { label: "Lighthouse 90+", value: 8 },
+                { label: "Programming Languages", value: 6 },
               ].map((m) => (
                 <div key={m.label} className="rounded-xl border p-4 text-center">
                   <p className="text-2xl font-semibold">{m.value}</p>
@@ -228,7 +250,7 @@ export default function Portfolio() {
       <Section id="about" title="About">
         <div className="grid gap-6 md:grid-cols-2">
           <p className="leading-relaxed text-gray-700 dark:text-gray-300">
-            I focus on turning designs into accessible, responsive web experiences. I write semantic HTML, modern CSS (including Flexbox and Grid), and progressive enhancement with vanilla JS. Recently, I’ve been using Tailwind and React to build component-driven UIs.
+            I focus on turning designs into accessible, responsive web experiences. I write semantic HTML, modern CSS, and progressive enhancement with vanilla JS. Recently, I’ve been using Tailwind and React to build component-driven UIs.
           </p>
           <div className="grid grid-cols-2 gap-3">
             {["Responsive Layouts","Accessibility (a11y)","Performance Basics","Reusable Components","Cross-browser CSS","Git & PRs"].map((t) => (
@@ -260,21 +282,40 @@ export default function Portfolio() {
         <div className="grid gap-6 md:grid-cols-3">
           {PROJECTS.map((p) => (
             <Card key={p.title}>
-              <div className="h-36 w-full rounded-xl bg-gradient-to-tr from-indigo-200 via-sky-200 to-emerald-200 dark:from-indigo-900/40 dark:via-sky-900/40 dark:to-emerald-900/40" />
+              {/* Project Image */}
+              <img
+                src={p.image}
+                alt={p.title}
+                className="h-36 w-full rounded-xl object-cover"
+              />
+
+              {/* Project Title + Description + Link */}
               <div className="mt-4 flex items-start justify-between gap-3">
                 <div>
                   <h3 className="font-semibold">{p.title}</h3>
-                  <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">{p.description}</p>
+                  <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                    {p.description}
+                  </p>
                 </div>
-                <a className="rounded-lg border p-2" href={p.link} target="_blank" rel="noreferrer" aria-label="Open project">
+                <a
+                  className="rounded-lg border p-2"
+                  href={p.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open project"
+                >
                   <ExternalLink size={16} />
                 </a>
               </div>
+
+              {/* Stack / Tools */}
               <div className="mt-3 flex flex-wrap gap-2">
                 {p.stack.map((s) => (
                   <Pill key={s}>{s}</Pill>
                 ))}
               </div>
+
+              {/* Highlights */}
               <ul className="mt-3 list-disc pl-5 text-sm text-gray-700 dark:text-gray-300">
                 {p.highlights.map((h) => (
                   <li key={h}>{h}</li>
@@ -312,7 +353,7 @@ export default function Portfolio() {
             <div>
               <p className="text-lg font-medium">Have a role that fits my toolkit?</p>
               <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                I’m available for junior web developer roles and freelance UI builds. I can share code samples and a live walkthrough.
+                I’m available for junior web developer roles. I can share code samples and a live walkthrough.
               </p>
               <div className="mt-4 flex flex-wrap gap-3 text-sm">
                 <a href={`mailto:${PROFILE.email}`} className="inline-flex items-center gap-2 rounded-2xl bg-gray-900 text-white px-4 py-2 hover:translate-x-0.5 hover:-translate-y-0.5 transition-transform shadow">
