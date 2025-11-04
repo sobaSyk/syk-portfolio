@@ -17,14 +17,14 @@ const PROFILE = {
 };
 
 const SKILLS = [
-  { name: "HTML5", level: 85 },
-  { name: "CSS3", level: 85 },
-  { name: "JavaScript", level: 80 },
+  { name: "HTML5", level: 90 },
+  { name: "CSS3", level: 90 },
+  { name: "JavaScript", level: 85 },
   { name: "Bootstrap", level: 80 },
-  { name: "Tailwind CSS", level: 75 },
-  { name: "React", level: 70 },
-  { name: "Git", level: 70 },
-  { name: "REST APIs", level: 65 },
+  { name: "Git", level: 75 },
+  { name: "React", level: 65 },
+  { name: "Tailwind CSS", level: 65 },
+  { name: "REST APIs", level: 60 },
 ];
 
 const PROJECTS = [
@@ -250,10 +250,10 @@ export default function Portfolio() {
       <Section id="about" title="About">
         <div className="grid gap-6 md:grid-cols-2">
           <p className="leading-relaxed text-gray-700 dark:text-gray-300">
-            I focus on turning designs into accessible, responsive web experiences. I write semantic HTML, modern CSS, and progressive enhancement with vanilla JS. Recently, I’ve been using Tailwind and React to build component-driven UIs.
+            I build responsive and user-friendly websites using HTML, CSS, JavaScript, and React. I enjoy creating clean designs, improving performance, and turning ideas into functional, modern web experiences.
           </p>
           <div className="grid grid-cols-2 gap-3">
-            {["Responsive Layouts","Accessibility (a11y)","Performance Basics","Reusable Components","Cross-browser CSS","Git & PRs"].map((t) => (
+            {["Responsive Web Design","Frontend Development","React Components","API Integration","Version Control (Git)","UI/UX Implementation"].map((t) => (
               <div key={t} className="rounded-xl border p-4 text-sm">
                 <div className="flex items-center gap-2"><Code size={16}/><span className="font-medium">{t}</span></div>
               </div>
