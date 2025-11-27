@@ -851,7 +851,7 @@ img{max-width:100%;display:block}
 /* 3) RIGHT CARD — CONTACT FORM    */
 /* =============================== */
 
-.contact-right{
+/* .contact-right{
   background:var(--panel);
   box-shadow:
     0 0 10px rgba(255, 255, 255, 0.573),
@@ -867,10 +867,10 @@ img{max-width:100%;display:block}
   background:#ffffff;
   opacity:.8;
   margin:6px 0 14px;
-}
+} */
 
 /* Inside right card */
-.contact-form{
+/* .contact-form{
   display:flex;
   flex-direction:column;
   gap:16px;
@@ -901,4 +901,4 @@ img{max-width:100%;display:block}
 .contact-actions{
   margin-top:14px;
   text-align:center;
-}
+} */
